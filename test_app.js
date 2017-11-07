@@ -1,9 +1,17 @@
 //A simple test to verify a visible window is opened with a title
 var Application = require('spectron').Application
 var assert = require('assert')
+var path   = require('path')
+var electron = require('electron')
+
+const APPLICATION_PATH = path.resolve(
+  __dirname, 'main.js');
+
+console.log(APPLICATION_PATH)
 
 var app = new Application({
-  path: 'main.js'})
+  args : [APPLICATION_PATH],
+  path: electron})
 
 console.log('Running app...')
 
