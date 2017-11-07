@@ -3,7 +3,7 @@ var Application = require('spectron').Application
 var assert = require('assert')
 
 var app = new Application({
-  path: '/root/headless-testing/electron-quick-start/MyApp-linux-x64'})
+  path: 'main.js'})
 
 console.log('Running app...')
 
